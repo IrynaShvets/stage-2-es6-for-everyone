@@ -22,6 +22,7 @@ export function createFighterPreview(fighter, position) {
       className: 'fighter-image',
       attributes
     });
+    imgElement.style.width = '140px';
     if (position === 'right') {
       imgElement.style.transform = 'scale(-1, 1)';
     }
@@ -29,10 +30,10 @@ export function createFighterPreview(fighter, position) {
   }
 
   if (fighter) {
-    const keyAndValueFighter = Object.entries(fighter);
-    keyAndValueFighter
-      .filter((keyValueAll) => keyValueAll[0] !== '_id' && keyValueAll[0] !== 'source')
-      .forEach((keyValue) => fighterElement.append(createName(keyValue)));
+    const infoFighter = Object.entries(fighter);
+    infoFighter
+      .filter((info) => info[0] !== '_id' && info[0] !== 'source')
+      .forEach((infoWithoutImg) => fighterElement.append(createName(infoWithoutImg.join(': '))));
     fighterElement.append(createImage(fighter['source']));
   }
 

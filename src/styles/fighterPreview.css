@@ -13,7 +13,10 @@
 }
 
 .name {
-  font-size: 15px;
+  font-size: 18px;
+  font-weight: 700;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: #fff;
+  color: rgb(131, 8, 8);
+  text-transform: capitalize;
+  text-shadow: 0 2px 1px #fff, 0 5px 4px #c2dae5, 0 11px 8px #264d5f;
 }
