@@ -6,14 +6,14 @@ export async function fight(firstFighter, secondFighter) {
 
     firstFighter.healthFighter = 100 / firstFighter.health;
     secondFighter.healthFighter = 100 / secondFighter.health;
-    firstFighter.healthCriticalHit = 100 / firstFighter.health + 3;
 
     let health = null;
 
     window.document.addEventListener('keydown', attackFighters);
 
     function attackFighters(e) {
-      const press = 'Key' + e.key.toUpperCase();
+      const press = `${e.code}`;
+      console.log(press);
 
       if (press === controls.PlayerOneAttack) {
         getHitPower(firstFighter);
