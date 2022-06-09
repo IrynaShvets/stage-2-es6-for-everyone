@@ -13,7 +13,6 @@ export async function fight(firstFighter, secondFighter) {
 
     function attackFighters(e) {
       const press = `${e.code}`;
-      console.log(press);
 
       if (press === controls.PlayerOneAttack) {
         getHitPower(firstFighter);
@@ -48,10 +47,10 @@ export function getDamage(attacker, defender) {
 
 export function getHitPower(fighter) {
   // return hit power
-  return fighter.attack * Math.random();
+  return fighter.attack * Math.random() + 1;
 }
 
 export function getBlockPower(fighter) {
   // return block power
-  return fighter.defense * Math.random();
+  return fighter.defense * Math.random() + 1;
 }
